@@ -1,0 +1,36 @@
+#normal {
+  border-radius: 3px;
+  width: 300px;
+  height: 54px;
+  border: 1px solid #ccc;
+  background-color: #ffffff; }
+  #normal font {
+    font-style: SegoUI;
+    font-size: 13px;
+    padding-left: 10;
+    color: #666666; }
+
+#disable {
+  border-radius: 3px;
+  width: 300px;
+  height: 54px;
+  border: 1px solid #cccccc;
+  background-color: #eeeeee;
+  cursor: not-allowed; }
+  #disable font {
+    font-style: SegoUI;
+    font-size: 13px;
+    padding-left: 10;
+    color: #999999; }
+
+#error {
+  border-radius: 3px;
+  width: 300px;
+  height: 54px;
+  background-color: #fde7e1;
+  border: 1px solid #cccccc; }
+  #error font {
+    font-style: SegoUI;
+    font-size: 13px;
+    padding-left: 10;
+    color: #f44336; }

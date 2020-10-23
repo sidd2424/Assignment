@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        .table {
+            display: table;
+        }
+
+        .table-row {
+            display: table-row;
+        }
+
+        .table-cell {
+            display: table-cell;
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        .table-cell-1 {
+            display: table-cell;
+            padding: 5px;
+            border: 1px solid white;
+        }
+
+        p {
+            float: right;
+        }
+
+        #auId {
+            visibility: hidden;
+        }
+    </style>
+    <title>Last Assignmnet</title>
+</head>
+
+<body onload="startTime()">
+
+    <form method="POST" action="..\Sucess.html">
+
+        <button><a href="/JAVASCRIPT/lab6/assign6.html" de>Back</a></button>
+
+        <p id="demo"></p>
+
+
+        <br><br>
+        <h1>Register form</h1>
+
+        <div class="table">
+
+
+            <div class="table-row">
+                <div class="table-cell">
+                    <label for="fName"><b>First Name</b></label>
+                </div>
+                <div class="table-cell">
+                    <input type="text" pattern="[A-Za-z]" name="fName" id="fName" required><br>
+                </div>
+
+
+            </div>
+            <div class="table-row">
+                <div class="table-cell">
+                    <label for="lName"><b>last Name</b></label>
+                </div>
+                <div class="table-cell">
+                    <input type="text" pattern="[A-Za-z]" id="lName" required><br>
+                </div>
+
+
+            </div>
+
+            <div class="table-row">
+                <div class="table-cell">
+                    <label for="DOJ"><b>Date of Birth</b></label>
+                </div>
+                <div class="table-cell">
+                    <input type="date" name="DOB" id="DOB" required><br>
+                </div>
+
+
+            </div>
+
+            <div class="table-row">
+                <div class="table-cell">
+                    <label for="email"><b>Email</b></label>
+                </div>
+                <div class="table-cell">
+                    <input type="email" name="email" id="email" required><br>
+                </div>
+            </div>
+
+
+            <div class="table-row">
+                <div class="table-cell">
+                    <label for="Programs"><b>Hobby </b></label>
+                </div>
+                <div class="table-cell">
+                    <input type="checkbox" id="myCheck" onclick="myCh()">
+                    <label for="web basic"> Reading</label><br>
+                    <input type="checkbox" id="C#" name="C#" value="C#">
+                    <label for="C#"> Watching Movies</label><br>
+                    <input type="checkbox" id="Entity Framework" name="Entity Framework" value="Entity Framework">
+                    <label for="Entity Framework">Photography</label><br>
+                </div>
+
+
+            </div>
+            <div class="table-row" id="auId">
+                <div class="table-cell">
+                    <label for="writer"><b>Favorite Writer</b></label>
+                </div>
+                <div class="table-cell">
+                    <input type="text" name="text" id="author" ><br>
+                </div>
+
+
+            </div>
+
+
+
+            <div class="table-row">
+                <div class="table-cell-1">
+
+                </div>
+                <div class="table-cell-1">
+                    <input type="reset" value="Reset">
+
+                    <button><a href="Sucess.html">Submit </a></button>
+                </div>
+
+
+            </div>
+        </div>
+    </form>
+
+    <script>
+
+
+        function startTime() {
+            var today = new Date();
+
+            var s = today.getSeconds();
+            // add a zero in front of numbers<10
+            s = checkTime(s);
+            document.getElementById('demo').innerHTML = " Welcome! You are using “Chrome” and you are on this page since " + s + " seconds";
+            t = setTimeout(function () { startTime() }, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+
+
+        function myCh() {
+            var checkBox = document.getElementById("myCheck");
+            var text = document.getElementById("auId");
+            if (checkBox.checked == true) {
+                text.style.visibility = "visible";
+            } 
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Embedding Script tag</title>
+        <script>
+           var headParam=50;
+        </script>
+        <hr>
+    </head>
+
+    <body>
+        <script>
+            var bodyParam=100;
+        </script>
+        <hr>
+        <script src="mathFun.js">
+        </script>
+        <script>
+            document.write(addNumbers(headParam,bodyParam));
+        </script>
+        <hr>
+    </body>
+    </html>

@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound</title>
+</head>
+<body>
+    <script>
+
+        var principal=prompt("Enter the principal amount");
+        var roi=prompt("Enter rate of intrest");
+        var years=prompt("Enter no of years");
+        var Total_interest=(principal*(Math.pow(1+roi/100),years))-principal;
+        alert("Total intrest payable is: "+Total_interest);
+
+    </script>
+</body>
+</html>

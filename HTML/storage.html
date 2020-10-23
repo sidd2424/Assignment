@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+
+    <head>
+        <script>
+            function saveKeyValue()
+            {
+                console.log("inside save");
+                var key=document.getElementById('keyId').value;
+                var val=document.getElementById('valueId').value;
+                
+
+                localStorage.setItem(key,val);
+
+                var tab = document.getElementById('mytable');
+
+                var row = tab.insertRow();
+
+                var cell1=row.insertCell(0);
+                var cell2=row.insertCell(1);
+                var cell3=row.insertCell(2);
+
+                var butt=document.createElement('button');
+                butt.innerHTML ="Remove";
+                butt.addEventListener("click",function(){
+                    console.log("inside remove");
+                    localStorage.removeItem(key);
+
+                    row.removeChild(cell1);
+                    row.removeChild(cell2);
+                    row.removeChild(cell3);
+                });
+
+                var text1=document.createTextNode(key);
+                var text2=document.createTextNode(val);
+
+                cell1.appendChild(text1);
+                cell2.appendChild(text2);
+                cell3.appendChild(butt);
+                                
+            }
+            function removeKeyValue()
+            {
+                localStorage.clear();
+                var tab=document.getElementById('mytable');
+
+                tab.remove();
+            }
+            
+        </script>
+
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>Key</td>
+                <td><input type="text" id="keyId"></td>
+                <td>Value</td>
+                <td><input type="text" id="valueId"></td>
+                <td><button id="btn" onclick="saveKeyValue()">Save </button></td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+        <br>
+        
+
+        <table id="mytable" style="border:1px solid black">
+            <thead>
+                <h3>Local Storage</h3>
+                
+            </thead>
+            <tr>
+                <td>Keys</td>
+                <td>Values</td>
+            </tr>
+            
+        </table> 
+
+        <br>
+        <button id="btn1" onclick="removeKeyValue()">Remove All</button>
+        
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="circle" width="500" height="500">
+        This will be displayed if not supported
+    </canvas>
+
+    <script type="text/javascript">
+    var c=document.getElementById('circle');
+    var context=c.getContext('2d');
+    context.fillStyle="yellow";
+
+    
+    context.beginPath();
+    context.arc(75,75,50,0,Math.PI*2,true);
+    context.closePath();
+    context.fill();
+    context.strokeStyle="black";
+
+    context.moveTo(110,75);
+    context.beginPath();
+    context.arc(75,75,35,0.15*Math.PI,0.85*Math.PI,false);
+    context.stroke();
+
+    context.moveTo(65,65);
+    context.beginPath();
+    context.arc(60,65,5,0,Math.PI*2,true);
+    context.closePath();
+    context.fillStyle="black";
+    context.fill();
+
+    context.moveTo(95,65);
+    context.beginPath();
+    context.arc(90,65,5,0,Math.PI*2,true);
+    context.closePath();
+    context.fillStyle="black";
+    context.fill();
+
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 1px solid;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                HREF
+            </td>
+            <td id="td1">
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Pathname
+            </td>
+            <td id="td2">
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Protocol
+            </td>
+            <td id="td3">
+
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <span>
+        Click <a href="/JAVASCRIPT/lab6/assign1.html">Here</a> to register.
+    </span>
+    <script>
+        console.log(window.location.pathname);
+        document.getElementById("td1").innerHTML = window.location.href;
+        document.getElementById("td2").innerHTML = window.location.pathname;
+        document.getElementById("td3").innerHTML = window.location.protocol;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var companyName="Cybage Software Pvt Ltd";
+        
+        var character=prompt("Enter the character to get its position");
+        var pos=companyName.indexOf(character);
+
+        if(pos==-1)
+        document.write("Character "+character+" not found")
+        else
+        document.write("Charater "+character+" is found at position "+pos);
+        document.write("<br>");
+        var str="Cybage Software Pvt Ltd is popularly known as Cybage Software";
+        document.write(str);
+        document.write("<br>");
+        document.write(str.substr(0,15));
+        document.write("<br>");
+        document.write(str.substring(0,23).toLowerCase());
+        document.write("<br>");
+        document.write(str.substring(0,23).toUpperCase());
+        
+
+
+   
+     </script>
+</body>
+</html>

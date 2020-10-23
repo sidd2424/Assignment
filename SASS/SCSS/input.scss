@@ -1,0 +1,52 @@
+$varA: 3px;
+$normalColor:#666666;
+$normalBGColor:#ffffff;
+$disableBGColor:#eeeeee;
+$disableColor:#999999;
+$errorBGColor: #fde7e1 ;
+$errorColor: #f44336 ;
+$border: 1px solid;
+
+#normal{
+    border-radius: $varA;
+    width: $varA*100;
+    height: $varA*18;
+    border:$border #ccc;
+    background-color: $normalBGColor;
+
+    font{
+        font-style: SegoUI;
+        font-size: $varA+10;
+        padding-left: 10;
+        color: $normalColor;
+    }
+}
+
+#disable{
+    border-radius: $varA;
+    width: $varA*100;
+    height: $varA*18;
+    border: $border #cccccc;
+    background-color: $disableBGColor ;
+    cursor: not-allowed;
+    font{
+        font-style: SegoUI;
+        font-size: $varA+10;
+        padding-left: 10;
+        color: $disableColor;
+    }
+}
+
+#error{
+    border-radius: $varA;
+    width: $varA*100;
+    height: $varA*18;
+    background-color: $errorBGColor ;
+    border:$border #cccccc;
+    font{
+        font-style: SegoUI;
+        font-size: $varA+10;
+        padding-left: 10;
+        color: $errorColor;
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reg Form</title>
+    <link rel='stylesheet' href="/JAVASCRIPT/lab7/regForm.css" type="text/css">
+    <script src="/JAVASCRIPT/lab7/regForm.js"></script>
+</head>
+<body onload="document.registration.userid.focus();">
+    <h1>Registration Form</h1>
+
+<form name='registration' onSubmit="return formValidation();">
+<ul>
+<li><label for="fName">First Name:</label></li>
+<li><input type="text" name="fName" /></li>
+
+<li><label for="lName">Last Name:</label></li>
+<li><input type="text" name="lName" /></li>
+
+<li><label for="dob">DOB:</label></li>
+<li><input type="text" name="dob" /></li>
+
+<li><label for="email">Email:</label></li>
+<li><input type="text" name="email" /></li>
+
+<li><label for="passid">Password:</label></li>
+<li><input type="password" name="passid" size="12" /></li>
+
+<li><label for="address">Address:</label></li>
+<li><input type="text" name="address" /></li>
+
+<li><label>Hobby:</label></li>
+<li><input type="checkbox" name="reading" value="reading" id="myCheck" onclick="myCh()" /><span>Reading</span></li>
+<li><input type="checkbox" name="movies" value="movies" /><span>Watching Movies</span></li>
+<li><input type="checkbox" name="photo" value="photo" /><span>Photography</span></li>
+<li><div id="auId">
+    <label for="writer">Favorite Writer</label>
+    <input type="text" name="text" id="author" ><br>
+</div></li>
+
+<li><input type="submit" name="submit" value="Submit" /></li>
+</ul>
+
+</form>
+</body>
+</html>

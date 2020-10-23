@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration</title>
+    <link rel="stylesheet" href="/CSS/RegForm.css">
+        
+</head>
+<body>
+    <form action="success.html">
+    <h1>Registeration Form</h1>
+
+    <div><label>Employee ID:</Label><input type="Number" min="10001" max="15000" autofocus required ></div>
+    <div><label>First Name:</label><input type="text" pattern="[A-Za-z]{3,15}" title="only characters minimum 3 and maximum 15" placeholder="Enter First Name" required></div>
+    <div><label>Last Name:</label><input type="text" pattern="[A-Za-z]{5,25}" title="only characters minimum 5 and maximum 25" placeholder="Enter Last Name" required></div>
+    <div><label>Department:</label><section><input type="radio" name="IT" id="IT">IT
+        <input type="radio" name="HR" id="HR">HR
+        <input type="radio" name="FINANCE" id="FINANCE">FINANCE
+        <input type="radio" name="ADMIN" id="ADMIN">ADMIN
+    </section>
+</div>
+    <div><label>Date of Joining:</label><input type="date" max="12-10-2020" required></div>
+    <div><label>Email Address:</label><input type="email" required></div>
+    <div><label>Contact Number:</label><input type="text" pattern="[789][0-9]{9}" required></div>
+    <div><label>Address</label> <textarea rows="10" cols="23" required></textarea></div>
+    <div><label>Training Programs to be attended:</label><input type="checkbox">Web Basic<br>
+        <input type="checkbox">C# <br>
+        <input type="checkbox">Web Basic<br>
+        <input type="checkbox">Entity Framework<br>
+        <input type="checkbox">ASP DOTNET MVC<br></div>
+    
+    
+   
+
+    <div><input type="submit"  value="Register">
+        <input type="reset" value="Cancel"></div>
+
+</form>
+</body>
+</html>

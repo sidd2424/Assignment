@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxem Technologies</title>
+    <style>
+        #grad{
+            background-image: radial-gradient(circle, red,orange, yellow, green , blue);
+            height: 50px;
+            color: black;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .canvas{
+                position: relative;
+                float: left;
+                border: 1px solid black;
+                height: 50px;
+                width: 100px;
+            }
+    </style>
+</head>
+<body>
+
+    <div id="grad" style="text-align: center; margin: auto; color: #888888;">
+        <canvas id="canvas" class="canvas"></canvas>
+        Oxem Technologies
+    </div>
+    <img id="i1" width="220" height="277"
+    src="/HTML/images/soft1.jpg" alt="The scream" >
+    <img id="i2" width="220" height="277"
+    src="/HTML/images/soft2.jpg" alt="The scream" >
+    <img id="i3" width="220" height="277"
+    src="/HTML/images/soft3.jpg" alt="The scream" >
+    <canvas id="myCanvas" width="1000" height="500" style="border: 1px solid #d3d3d3;">
+    </canvas>
+    <canvas id="c1" width="1000" height="297" style="border: 1px solid #d3d3d3;">
+    Your Browser does not suppor the canvas tag.
+    </canvas>
+</body>
+
+<script>
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+
+var arcWidth = 10;
+var radius = 8 * arcWidth;
+
+var omkadering = document.getElementById("canvas");
+var context = omkadering.getContext("2d");
+omkadering.width = (radius + (colors.length-0.5) * arcWidth) * 2;
+omkadering.height = (radius + (colors.length-1) * arcWidth);
+
+var drawArc = function( color ){
+  context.beginPath();
+  context.arc(
+    omkadering.width/2,
+    omkadering.height + arcWidth/2,
+    radius,
+    Math.PI,
+    2*Math.PI
+  );
+  context.lineWidth = arcWidth;
+  context.strokeStyle = color;
+  context.stroke();
+  context.closePath();
+  radius += arcWidth;
+};
+
+colors.reverse().forEach( drawArc );
+</script>
+</html>

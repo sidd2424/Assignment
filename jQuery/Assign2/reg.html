@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/jQuery/Assign2/reg.css"/>
+    <script src="/jQuery/Assign2/reg.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Registration Form</title>
+</head>
+<body>
+    <div class="container">
+        <h2 style="color: darkblue;">Registration</h2>
+        <form action="" name="registration">
+      
+          <label for="username">User Name</label>
+          <input type="text" id="username" placeholder="Enter user Name"/>
+
+          <!--<label for="password">Password</label>
+          <input type="password" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;"/>-->
+
+          
+          <label for="password">Password</label>
+          <input type='password' id='test-input' />Show password
+          <input type='checkbox' id='check' />
+
+          <label for="cPassword">Confirm Password</label>
+          <input type="password" id="cPassword" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;"/> 
+          <div class="registrationFormAlert" style="color:green;" id="CheckPasswordMatch"></div>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="abc@gmail.com"/>
+      
+          <label for="mobile">Mobile</label>
+          <input type="text" id="mobile" pattern="[789][0-9]{9}" placeholder="Enter Mobile No."/>
+
+          <label for="skill">Skill</label>
+          <input type="text" id="skill" placeholder="Enter your Skills"/>
+
+          <label>Enter City:</label>
+          <select id='myCity'>
+          <option value="pune">Pune</option>
+          <option value="mumbai">Mumbai</option>
+          <option value="nagpur">Nagpur</option>
+          <option value="delhi">Delhi</option>
+          </select>
+      
+          <button type="submit">Register</button>
+      
+        </form>
+      </div>
+</body>
+</html>

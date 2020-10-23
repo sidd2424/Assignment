@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr=[];
+        function addName(){
+            var name=document.getElementById("arr").value;
+            arr.push(name);
+        }
+
+        function Display(){
+            document.write("<h2>List of students</h2>")
+            for(let i=0;i<4;i++){
+                document.write(arr[i]+"<br>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="arr">
+    <button onclick="addName()">Add</button>
+    <button onclick="Display()">Display</button> 
+</body>
+</html>
