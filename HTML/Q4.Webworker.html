@@ -1,34 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Worker</title>
-</head>
+<html>
+  <head>
+    <script src="/HTML/demo.js"></script>
+  </head>
 <body>
-    <p>Count numbers: <output id="result"></output></p>
-<button onclick="startWorker()">Start Worker</button> 
-<button onclick="stopWorker()">Stop Worker</button>
+
+<p>Count numbers: <output id="rslt"></output></p>
+<button onclick="strtWorker()">Start </button> 
+<button onclick="stpWorker()">Stop </button>
 
 <p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support Web Workers.</p>
 
 <script>
 var w;
 
-function startWorker() {
+function strtWorker() {
   if(typeof(Worker) !== "undefined") {
     if(typeof(w) == "undefined") {
-      w = new Worker("demo_workers.js");
+      w = new Worker("./demo.js");
     }
     w.onmessage = function(event) {
-      document.getElementById("result").innerHTML = event.data;
+      document.getElementById("rslt").innerHTML = event.data;
     };
   } else {
-    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+    document.getElementById("rslt").innerHTML = "Sorry, your browser does not support Web Workers...";
   }
 }
 
-function stopWorker() { 
+function stpWorker() { 
   w.terminate();
   w = undefined;
 }
